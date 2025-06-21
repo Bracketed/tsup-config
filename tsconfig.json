@@ -1,0 +1,10 @@
+{
+	"extends": ["@bracketed/typescript-config/tsup-strict"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"rootDir": "./src",
+		"outDir": "./lib"
+	},
+	"include": ["src"],
+	"exclude": ["lib", "node_modules", "tsup.config.ts"]
+}
