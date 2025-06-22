@@ -1,7 +1,7 @@
 {
 	"name": "@bracketed/tsup-configuration",
 	"description": "Tsup configurations for various types of projects or packages.",
-	"packageManager": "yarn@4.9.2",
+	"packageManager": "yarn@4.9.3",
 	"version": "1.0.3",
 	"publishConfig": {
 		"access": "public"
@@ -14,21 +14,21 @@
 	"exports": {
 		".": {
 			"import": {
-				"types": "./lib/esm/index.d.ts",
+				"types": "./lib/esm/index.d.mts",
 				"default": "./lib/esm/index.mjs"
 			},
 			"require": {
-				"types": "./lib/cjs/index.d.cts",
+				"types": "./lib/cjs/index.d.ts",
 				"default": "./lib/cjs/index.cjs"
 			}
 		},
 		"./configurations/*": {
 			"import": {
-				"types": "./lib/esm/configs/*.d.ts",
+				"types": "./lib/esm/configs/*.d.mts",
 				"default": "./lib/esm/configs/*.mjs"
 			},
 			"require": {
-				"types": "./lib/cjs/configs/*.d.cts",
+				"types": "./lib/cjs/configs/*.d.ts",
 				"default": "./lib/cjs/configs/*.cjs"
 			}
 		}
