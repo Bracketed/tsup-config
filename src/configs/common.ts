@@ -10,7 +10,7 @@ export const options: Options = {
 	...base,
 	outDir: 'dist',
 	format: 'cjs',
-	outExtension: () => ({ js: '.cjs' }),
+	outExtension: () => ({ js: '.cjs', dts: '.d.cts' }),
 };
 
 export function buildOptions(opts?: Options, pluginOpts?: PluginConfiguration) {

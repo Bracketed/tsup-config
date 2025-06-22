@@ -28,15 +28,14 @@ const baseOptions: Options = {
 export default [
 	defineConfig({
 		...baseOptions,
-		outDir: 'lib/cjs',
-		format: 'cjs',
-		outExtension: () => ({ js: '.cjs' }),
-	}),
-	defineConfig({
-		...baseOptions,
 		outDir: 'lib/esm',
 		format: 'esm',
 		outExtension: () => ({ js: '.mjs', dts: '.d.mts' }),
 	}),
+	defineConfig({
+		...baseOptions,
+		outDir: 'lib/cjs',
+		format: 'cjs',
+		outExtension: () => ({ js: '.cjs', dts: '.d.cts' }),
+	}),
 ];
-
