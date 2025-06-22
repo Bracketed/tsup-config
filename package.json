@@ -2,7 +2,7 @@
 	"name": "@bracketed/tsup-configuration",
 	"description": "Tsup configurations for various types of projects or packages.",
 	"packageManager": "yarn@4.9.3",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"publishConfig": {
 		"access": "public"
 	},
@@ -10,7 +10,7 @@
 	"author": "@bracketed",
 	"main": "lib/cjs/index.cjs",
 	"module": "lib/esm/index.mjs",
-	"types": "lib/cjs/index.d.cts",
+	"types": "lib/cjs/index.d.ts",
 	"exports": {
 		".": {
 			"import": {
