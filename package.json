@@ -3,7 +3,7 @@
 	"description": "Tsup configurations for various types of projects or packages.",
 	"packageManager": "yarn@4.9.2",
 	"version": "1.0.0",
-	"private": true,
+	"private": false,
 	"publishConfig": {
 		"access": "public"
 	},
