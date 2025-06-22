@@ -13,16 +13,16 @@ export const options: Options = {
 	outExtension: () => ({ js: '.cjs' }),
 };
 
-export function buildOptions(opts: Options, pluginOpts: PluginConfiguration) {
+export function buildOptions(opts?: Options, pluginOpts?: PluginConfiguration) {
 	return defineConfig({
 		...options,
 		...opts,
 		esbuildPlugins: [
-			...(opts.esbuildPlugins || []),
+			...((opts ?? {}).esbuildPlugins || []),
 			...(options.esbuildPlugins || []),
-			esbuildPluginVersionInjector(pluginOpts.pluginVersionInjector),
-			esbuildPluginFilePathExtensions(pluginOpts.pluginFilePathExtensions),
-			esbuildPluginCopier(pluginOpts.pluginCopier),
+			esbuildPluginVersionInjector((pluginOpts ?? {}).pluginVersionInjector),
+			esbuildPluginFilePathExtensions((pluginOpts ?? {}).pluginFilePathExtensions),
+			esbuildPluginCopier((pluginOpts ?? {}).pluginCopier),
 		],
 	});
 }

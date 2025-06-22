@@ -3,8 +3,8 @@ import { esbuildPluginFilePathExtensions } from 'esbuild-plugin-file-path-extens
 import { esbuildPluginVersionInjector } from 'esbuild-plugin-version-injector';
 import { defineConfig, type Options } from 'tsup';
 
-import type { PluginConfiguration } from '../types';
 import { plugins } from '../plugins';
+import type { PluginConfiguration } from '../types';
 
 export const base: Options = {
 	clean: true,
@@ -22,16 +22,16 @@ export const base: Options = {
 	treeshake: true,
 };
 
-export function buildOptions(opts: Options, pluginOpts: PluginConfiguration) {
+export function buildOptions(opts?: Options, pluginOpts?: PluginConfiguration) {
 	return defineConfig({
 		...base,
 		...opts,
 		esbuildPlugins: [
-			...(opts.esbuildPlugins || []),
+			...((opts ?? {}).esbuildPlugins || []),
 			...(base.esbuildPlugins || []),
-			esbuildPluginVersionInjector(pluginOpts.pluginVersionInjector),
-			esbuildPluginFilePathExtensions(pluginOpts.pluginFilePathExtensions),
-			esbuildPluginCopier(pluginOpts.pluginCopier),
+			esbuildPluginVersionInjector((pluginOpts ?? {}).pluginVersionInjector),
+			esbuildPluginFilePathExtensions((pluginOpts ?? {}).pluginFilePathExtensions),
+			esbuildPluginCopier((pluginOpts ?? {}).pluginCopier),
 		],
 	});
 }
