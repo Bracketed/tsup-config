@@ -2,7 +2,7 @@
 	"name": "@bracketed/tsup-configuration",
 	"description": "Tsup configurations for various types of projects or packages.",
 	"packageManager": "yarn@4.9.3",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publishConfig": {
 		"access": "public"
 	},
