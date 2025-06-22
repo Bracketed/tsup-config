@@ -1,6 +1,6 @@
 {
-	"name": "@bracketed/package",
-	"description": "Description",
+	"name": "@bracketed/tsup-configuration",
+	"description": "Tsup configurations for various types of projects or packages.",
 	"packageManager": "yarn@4.9.2",
 	"version": "1.0.0",
 	"private": true,
@@ -22,6 +22,16 @@
 				"types": "./lib/cjs/index.d.cts",
 				"default": "./lib/cjs/index.cjs"
 			}
+		},
+		"./configurations/*": {
+			"import": {
+				"types": "./lib/esm/configs/*.d.ts",
+				"default": "./lib/esm/configs/*.mjs"
+			},
+			"require": {
+				"types": "./lib/cjs/configs/*.d.cts",
+				"default": "./lib/cjs/configs/*.cjs"
+			}
 		}
 	},
 	"files": [
@@ -30,16 +40,20 @@
 	"type": "module",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bracketed/templates-package"
+		"url": "https://github.com/Bracketed/tsup-config"
 	},
 	"homepage": "https://bracketed.co.uk",
 	"sideEffects": false,
 	"bugs": {
-		"url": "https://github.com/bracketed/templates-package/issues"
+		"url": "https://github.com/Bracketed/tsup-config"
 	},
 	"keywords": [
 		"bracketed",
-		"typescript"
+		"typescript",
+		"tsup",
+		"tsconfig",
+		"configuration",
+		"templates"
 	],
 	"scripts": {
 		"lint": "yarn prettier --write .",
@@ -51,15 +65,17 @@
 		"@bracketed/typescript-config": "^4.7.0",
 		"@swc/core": "^1.12.5",
 		"@types/node": "^24.0.3",
+		"prettier": "^3.5.3",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
 		"esbuild": "^0.25.5",
 		"esbuild-fix-imports-plugin": "^1.0.21",
 		"esbuild-plugin-copy": "^2.1.1",
 		"esbuild-plugin-file-path-extensions": "^2.1.4",
 		"esbuild-plugin-version-injector": "^1.2.1",
-		"prettier": "^3.5.3",
 		"tslib": "^2.8.1",
-		"tsup": "^8.5.0",
-		"typescript": "^5.8.3"
+		"tsup": "^8.5.0"
 	},
 	"engines": {
 		"node": ">=18"

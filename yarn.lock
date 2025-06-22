@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@bracketed/package@workspace:.":
+"@bracketed/tsup-configuration@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@bracketed/package@workspace:."
+  resolution: "@bracketed/tsup-configuration@workspace:."
   dependencies:
     "@bracketed/typescript-config": "npm:^4.7.0"
     "@swc/core": "npm:^1.12.5"

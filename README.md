@@ -5,24 +5,18 @@
 
 <br>
 
-<h2 align="center" >@bracketed/logger</h2>
+<h2 align="center" >@bracketed/tsup-configuration</h2>
 
-An alternative to your run-of-the-mill node console logging functions!
-This is a package built from the source code of [@sapphire/framework](https://www.npmjs.com/package/@sapphire/framework) & [@sapphire/plugin-logger](https://www.npmjs.com/package/@sapphire/plugin-logger) to allow usage of Sapphire's logger features in regular Node.js, full credit to the authors of the pieces of code that this package is made from.
-
-<h2>What is this?</h2>
-
-\- A Logger package built from [@sapphire/framework](https://www.npmjs.com/package/@sapphire/framework) & [@sapphire/plugin-logger](https://www.npmjs.com/package/@sapphire/plugin-logger) that uses [colorette](https://www.npmjs.com/package/colorette) for styling.
+Custom configurations for tsup, simplifies the usage and requirement to set up configs every time its used.
+Primarily made for backend use, but is also used in various Bracketed or ninjaninja140-related @templates repositories.
 
 <h2>Summary (Directory)</h2>
 
--   [Installation](#Installation)
+- [Installation](#Installation)
       <!--truncate-->
-    -   [Yarn](#YarnInstall)
-    -   [Npm](#NpmInstall)
--   [Usage](#Usage)
--   [Contribution](#Contribution)
--   [ChangeLog](#versionlog)
+    - [Yarn](#YarnInstall)
+    - [Npm](#NpmInstall)
+- [Contribution](#Contribution)
 
 <h2 id="Installation">Installation</h2>
 
@@ -31,43 +25,13 @@ Install via `yarn` or `npm`:
 <p id="YarnInstall">Yarn:</p>
 
 ```sh
-yarn add @bracketed/logger
+yarn add @bracketed/tsup-configuration
 ```
 
 <p id="NpmInstall">Npm:</p>
 
 ```sh
-npm install --save @bracketed/logger
-```
-
-<h2 id="Usage">Usage</h2>
-
-```ts
-// ESM
-import { Logger, LogLevel } from '@bracketed/logger';
-const console = new Logger();
-
-console.info('Hello World!');
-console.debug('Hello World!');
-console.warn('Hello World!');
-console.error('Hello World!');
-console.fatal('Hello World!');
-console.trace('Hello World!');
-console.write(LogLevel.Info, 'Hello World!');
-```
-
-```ts
-// CJS
-const { Logger, LogLevel } = require('@bracketed/logger');
-const console = new Logger();
-
-console.info('Hello World!');
-console.debug('Hello World!');
-console.warn('Hello World!');
-console.error('Hello World!');
-console.fatal('Hello World!');
-console.trace('Hello World!');
-console.write(LogLevel.Info, 'Hello World!');
+npm install --save @bracketed/tsup-configuration
 ```
 
 <h1 id="Contribution">Contribution & Help</h1>

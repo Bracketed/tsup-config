@@ -2,7 +2,7 @@ name: Node.js Package (NPM)
 
 on:
     workflow_dispatch:
-#    push:
+    push:
 
 jobs:
     verify:
@@ -14,9 +14,9 @@ jobs:
         secrets:
             BRSFTWORKS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-            project-name: '@bracketed/package'
+            project-name: '@bracketed/tsup-configuration'
             checkout-depth: 2
-            checkout-ref: master
+            checkout-ref: main
             cancel-on-same: true
 
     test:
@@ -38,8 +38,8 @@ jobs:
             id-token: write
             actions: write
         with:
-            project-name: '@bracketed/package'
-            checkout-ref: master
+            project-name: '@bracketed/tsup-configuration'
+            checkout-ref: main
         secrets:
             BRSFTWORKS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             NODE_AUTH_TOKEN: ${{secrets.NODE_PUBLISH}}
